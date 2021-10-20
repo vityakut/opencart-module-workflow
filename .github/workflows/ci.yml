@@ -19,6 +19,7 @@ env:
   OC_EMAIL: test@test.com
   SERVER_PORT: 80
   SERVER_URL: http://localhost
+  COVERAGE: 1
 
 jobs:
   test:
