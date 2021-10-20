@@ -1,12 +1,12 @@
 {
-    "name": "retailcrm/opencart-module",
-    "description": "Integration module for Opencart & RetailCRM",
+    "name": "vityakut/opencart-module-workflow",
+    "description": "Module for Opencart",
     "license": "GPL-3.0",
     "type": "project",
     "authors": [
         {
-            "name": "RetailDriverLLC",
-            "email": "support@retailcrm.pro"
+            "name": "vityakut",
+            "email": "vityakut@gmail.com"
         }
     ],
     "config": {

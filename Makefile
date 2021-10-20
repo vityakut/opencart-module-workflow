@@ -1,6 +1,6 @@
 ROOT_DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 VERSION = `cat $(ROOT_DIR)/VERSION`
-ARCHIVE_NAME = '/tmp/retailcrm-'$(VERSION)'.ocmod.zip'
+ARCHIVE_NAME = '/tmp/oc_module-'$(VERSION)'.ocmod.zip'
 
 .PHONY: coverage
 

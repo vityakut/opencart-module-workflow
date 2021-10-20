@@ -168,7 +168,7 @@ jobs:
         run: make phpcomp
   deploy:
     needs: ['phpcs']
-    if: success() && github.event_name == 'push' && github.repository_owner == 'retailcrm' && github.ref == 'refs/heads/master'
+    if: success() && github.event_name == 'push' && github.repository_owner == 'vityakut' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -182,7 +182,7 @@ jobs:
           git fetch origin --unshallow --tags
           export LAST_TAG=`git describe --abbrev=0 --tags`
           export VERSION=`cat VERSION`
-          export ARCHIVE_NAME=retailcrm-$VERSION.ocmod.zip
+          export ARCHIVE_NAME=oc_module-$VERSION.ocmod.zip
           export ARCHIVE_PATH="/tmp/$ARCHIVE_NAME"
           export RELEASE_TAG=v$VERSION
           export LAST_COMMIT=`git log --oneline --format=%B -n 1 HEAD | head -n 1`

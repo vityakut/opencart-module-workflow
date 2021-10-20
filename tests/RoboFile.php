@@ -10,11 +10,13 @@ class RoboFile extends \Robo\Tasks
     const OPENCART_DOWNLOAD_URL = [
         '3.0.1.2' => 'https://github.com/opencart/opencart/releases/download/3.0.1.2/3.0.1.2-opencart.zip',
         '3.0.2.0' => 'https://github.com/opencart/opencart/releases/download/3.0.2.0/3.0.2.0-OpenCart.zip',
-        '3.0.3.4' => 'https://github.com/opencart/opencart/releases/download/3.0.3.4/opencart-3.0.3.4-core-pre.zip'
+        '3.0.3.0' => 'https://github.com/opencart/opencart/releases/download/3.0.3.0/3.0.3.0-OpenCart.zip'
+        '3.0.3.7' => 'https://github.com/opencart/opencart/releases/download/3.0.3.7/3.0.3.7-OpenCart.zip'
+        '3.0.3.8' => 'https://github.com/opencart/opencart/releases/download/3.0.3.8/3.0.3.8-OpenCart.zip'
     ];
 
     const OPENCART_ROOT_DIR = [
-        '3.0.3.4' => 'opencart-3.0.3.4/upload'
+        '3.0.3.8' => 'opencart-3.0.3.8/upload'
     ];
 
     /**

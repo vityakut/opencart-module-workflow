@@ -1,18 +1,18 @@
-[![Build Status](https://github.com/retailcrm/opencart-module/workflows/ci/badge.svg)](https://github.com/retailcrm/opencart-module/actions)
-[![Coverage](https://img.shields.io/codecov/c/gh/retailcrm/opencart-module/master.svg?logo=codecov&logoColor=white)](https://codecov.io/gh/retailcrm/opencart-module)
-[![GitHub release](https://img.shields.io/github/release/retailcrm/opencart-module.svg?logo=github&logoColor=white)](https://github.com/retailcrm/opencart-module/releases)
+[![Build Status](https://github.com/vityakut/opencart-module-workflow/workflows/ci/badge.svg)](https://github.com/vityakut/opencart-module-workflow/actions)
+[![Coverage](https://img.shields.io/codecov/c/gh/vityakut/opencart-module-workflow/master.svg?logo=codecov&logoColor=white)](https://codecov.io/gh/vityakut/opencart-module-workflow)
+[![GitHub release](https://img.shields.io/github/release/vityakut/opencart-module-workflow.svg?logo=github&logoColor=white)](https://github.com/vityakut/opencart-module-workflow/releases)
 [![PHP version](https://img.shields.io/badge/PHP->=5.4-blue.svg?logo=php&logoColor=white)](https://php.net/)
 
 Opencart module
 ===============
 
-This module allows to integrate CMS Opencart >= 2.3 with [RetailCRM](https://retailcrm.pro).
+This module allows to integrate CMS Opencart >= 2.3 with RetailCRM
 
 ### Previous versions:
 
-[v1.x](https://github.com/retailcrm/opencart-module/tree/v1.x)
+[v1.x](https://github.com/vityakut/opencart-module-workflow/tree/v1.x)
 
-[v2.x (2.0, 2.1, 2.2)](https://github.com/retailcrm/opencart-module/tree/v2.2)
+[v2.x (2.0, 2.1, 2.2)](https://github.com/vityakut/opencart-module-workflow/tree/v2.2)
 
 #### Features:
 
