@@ -35,11 +35,9 @@ jobs:
           - php-version: '7.4'
             test-suite: '3'
             oc: '3.0.3.7'
-            coverage: 1
           - php-version: '7.4'
             test-suite: '3'
             oc: '3.0.3.8'
-            coverage: 1
     services:
       mysql:
         image: mysql:5.7
