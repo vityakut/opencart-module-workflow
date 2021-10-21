@@ -23,7 +23,7 @@ env:
 
 jobs:
   test:
-    if: GITHUB_ENV.TEST == true
+    if: ${{ GITHUB_ENV.TEST }} == true
     runs-on: ubuntu-latest
     strategy:
       matrix:
