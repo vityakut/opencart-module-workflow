@@ -23,7 +23,7 @@ env:
 
 jobs:
   test:
-    if: env.TEST
+    if: success()
     runs-on: ubuntu-latest
     strategy:
       matrix:
