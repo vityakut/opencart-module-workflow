@@ -19,9 +19,11 @@ env:
   OC_EMAIL: test@test.com
   SERVER_PORT: 80
   SERVER_URL: http://localhost
+  TEST: false
 
 jobs:
   test:
+    if: $TEST
     runs-on: ubuntu-latest
     strategy:
       matrix:
