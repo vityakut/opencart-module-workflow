@@ -99,11 +99,18 @@ jobs:
         with:
           php-version: '7.2'
           tools: composer:v1
+      - name: Bump version and push tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v5.6
+        with:
+          default_bump: "minor"
+          release_branches : "master,develop"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build release
         run: |
           git fetch origin --unshallow --tags
           export LAST_TAG=`git describe --abbrev=0 --tags`
-          export VERSION=`cat VERSION`
+          export VERSION=$steps.tag_version.outputs.new_tag
           export ARCHIVE_NAME=oc_module-$VERSION.ocmod.zip
           export ARCHIVE_PATH="/tmp/$ARCHIVE_NAME"
           export RELEASE_TAG=v$VERSION
@@ -117,7 +124,6 @@ jobs:
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
-        if: env.LAST_TAG != env.RELEASE_TAG
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
