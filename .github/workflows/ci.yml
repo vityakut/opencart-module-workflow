@@ -8,10 +8,22 @@ on:
       - '*.*'
   pull_request:
 
-
+env:
+  OC_DB_HOSTNAME: 127.0.0.1
+  OC_DB_USERNAME: root
+  OC_DB_PASSWORD: root
+  OC_DB_DATABASE: tests_opencart
+  OC_DB_DRIVER: mysqli
+  OC_USERNAME: admin
+  OC_PASSWORD: admin
+  OC_EMAIL: test@test.com
+  SERVER_PORT: 80
+  SERVER_URL: http://localhost
+  TEST: false
 
 jobs:
   test:
+    if: GITHUB_ENV.TEST == true
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -80,7 +92,7 @@ jobs:
         run: make phpcomp
   release:
     needs: ['phpcs']
-    if: (always() && true) || (success() &&  true) && github.event_name == 'push' && github.repository_owner == 'vityakut' && github.ref == 'refs/heads/master'
+    if: (always() && true) || (success() && TEST == true) && github.event_name == 'push' && github.repository_owner == 'vityakut' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
