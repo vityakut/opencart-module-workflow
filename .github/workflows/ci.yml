@@ -89,7 +89,6 @@ jobs:
       - name: Check compatibility
         run: make phpcomp
   release:
-    needs: ['phpcs']
     if: success() && github.event_name == 'push' && github.repository_owner == 'vityakut' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
@@ -103,17 +102,16 @@ jobs:
         id: tag_version
         uses: mathieudutour/github-tag-action@v5.6
         with:
-          default_bump: "minor"
+          default_bump: "patch"
           release_branches : "master,develop"
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build release
         run: |
           git fetch origin --unshallow --tags
           export LAST_TAG=`git describe --abbrev=0 --tags`
-          export VERSION=${{ steps.tag_version.outputs.new_tag }}
-          export ARCHIVE_NAME=oc_module-$VERSION.ocmod.zip
+          export RELEASE_TAG=${{ steps.tag_version.outputs.new_tag }}
+          export ARCHIVE_NAME=oc_module-$RELEASE_TAG.ocmod.zip
           export ARCHIVE_PATH="/tmp/$ARCHIVE_NAME"
-          export RELEASE_TAG=v$VERSION
           export LAST_COMMIT=`git log --oneline --format=%B -n 1 HEAD | head -n 1`
           echo RELEASE_TAG=$RELEASE_TAG >> $GITHUB_ENV
           echo LAST_TAG=$LAST_TAG >> $GITHUB_ENV
