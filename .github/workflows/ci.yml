@@ -23,7 +23,7 @@ env:
 
 jobs:
   test:
-    if: ${{ env.TEST == true}}
+    if: false
     runs-on: ubuntu-latest
     strategy:
       matrix:
